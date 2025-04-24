@@ -1,75 +1,40 @@
-# Nuxt Minimal Starter
+## BASF Frontend Task – Threaded Comments App
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This project is a solution to the BASF frontend task involving a threaded comment system built with Vue 3 and Nuxt 3.
 
-## Setup
+It uses `example.json` as the data source and allows users to view, reply to, and add comments.  
+The layout and interactions follow the provided Figma design.
 
-Make sure to install dependencies:
+---
+
+## 🔧 Technologies and tools used
+
+- **Nuxt 3** (Vue 3 + Vite + Composition API)
+- **TypeScript**
+- **Pinia** – for state management
+- **Vitest** – for unit testing
+- **ESLint v8** – configured for Vue 3 + TypeScript + Prettier
+- **Prettier** – for automatic code formatting
+- **Custom composables** – e.g. `useCurrentUser`
+- **Static JSON mock backend** – via `/public/data/example.json`
+
+---
+
+## Getting started
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
+## To run tests
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+npm run test
 ```
-
-Locally preview production build:
+## To lint and format
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+npm run lint
+npm run lint:fix
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

@@ -7,17 +7,11 @@ await commentsStore.fetchComments();
 </script>
 
 <template>
-  <div class="comments-page">
-    <h1>Threaded Comments</h1>
-    <CommentList :comments="commentsStore.comments" />
+  <div class="comments-page bg-basf-blue mx-[103px] my-[106px]">
+    <div
+      class="comments-list-container bg-basf-gray rounded-[10px] space-y-[30px] pt-[14px] pl-[23px] pr-[23px] pb-[24px]"
+    >
+      <CommentList :comments="commentsStore.comments" />
+    </div>
   </div>
 </template>
-
-<style scoped>
-.comments-page {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 1rem;
-  font-family: sans-serif;
-}
-</style>

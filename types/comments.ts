@@ -1,5 +1,3 @@
-// types/comments.ts
-
 export interface Author {
     name: string
     picture?: string

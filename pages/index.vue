@@ -1,27 +1,23 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import type { RawComment } from "@/types/comments";
+import { useCommentsStore } from "@/store/comments";
+import CommentList from "@/components/CommentList.vue";
 
-const rawComments = ref<RawComment[]>([]);
-
-onMounted(async () => {
-  const res = await fetch("/data/example.json");
-  const json = await res.json();
-  rawComments.value = json.data.comments;
-});
+const commentsStore = useCommentsStore();
+await commentsStore.fetchComments();
 </script>
 
 <template>
   <div class="comments-page">
-    <h1>Threaded Comments (Raw View)</h1>
-    <ul>
-      <li v-for="comment in rawComments" :key="comment.id">
-        <p>
-          <strong>{{ comment.author.name }}</strong
-          >: {{ comment.text }}
-        </p>
-        <small>{{ new Date(comment.timestamp).toLocaleString() }}</small>
-      </li>
-    </ul>
+    <h1>Threaded Comments</h1>
+    <CommentList :comments="commentsStore.comments" />
   </div>
 </template>
+
+<style scoped>
+.comments-page {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+</style>

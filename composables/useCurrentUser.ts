@@ -1,7 +1,6 @@
 export const useCurrentUser = () => {
-    return {
-      id: 'me',
-      name: 'Luka Jukić',
-    }
+  return {
+    id: 'me',
+    name: 'Luka Jukić'
   }
-  
+}

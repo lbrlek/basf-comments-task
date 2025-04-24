@@ -1,6 +1,16 @@
+<script setup></script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+  <div class="app">
+    <NuxtPage />
   </div>
 </template>
+
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+</style>

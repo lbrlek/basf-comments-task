@@ -16,7 +16,9 @@ const config: Config = {
         basf: {
           black: '#1E1E1E',
           gray: '#ECEEF1',
+          darkGray: '#82878D',
           blue: '#125CB1',
+          darkBlue: '#023168',
           red: '#B62323',
           green: '#23B632',
           yellow: '#B3B623',

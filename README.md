@@ -7,12 +7,27 @@ The layout and interactions follow the provided Figma design.
 
 ---
 
-## 🔧 Technologies and tools used
+
+## Features
+
+- View and reply to threaded comments
+- Nested (recursive) comment structure
+- Modal input for replies
+- Avatar fallback handling (color circle if no picture)
+- Responsive layout matching Figma
+- Unit tests for core components (`CommentItem`, `CommentList`)
+- Testing covers both rendering and user interactions
+
+---
+
+## Technologies and tools used
 
 - **Nuxt 3** (Vue 3 + Vite + Composition API)
 - **TypeScript**
 - **Pinia** – for state management
 - **Vitest** – for unit testing
+- **@vue/test-utils** – for testing Vue components
+- **Happy DOM** – for virtual DOM testing environment
 - **ESLint v8** – configured for Vue 3 + TypeScript + Prettier
 - **Prettier** – for automatic code formatting
 - **Custom composables** – e.g. `useCurrentUser`
